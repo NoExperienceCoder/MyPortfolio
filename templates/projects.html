@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ url_for('static', filename='style.css' )}}" rel="stylesheet">
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="pages">
+            <li class="left-m"><a href="/home">NikunjSaini</a></li>
+            <li class="left"><a href="/about">About</a></li>
+            <li class="left"><a href="/project">Projects</a></li>
+            <li class="left"><a href="/contact">Contact</a></li>
+            <li class="right"><a href="https://www.instagram.com/niksain_0.o/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li class="right"><a href="https://www.linkedin.com/in/nikunj-saini-837b8421a/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li class="right"><a href="https://medium.com/@nikunjsaini37" target="_blank"><i class="fa fa-medium"></i></a></li>
+            <li class="right"><a href="https://github.com/NoExperienceCoder" target="_blank"><i class="fa fa-github"></i></a></li>
+        </ul>
+    </div>
+    <div class="my-works">
+        <h1 class="projs">What Have I Made?</h1>
+        <button class="left-slider" id="leftShift" type="button" onclick="moveLeft()"><i class="fa fa-angle-left fa-3x"></i></button>
+        <button class="right-slider" id="rightShift" type="button" onclick="moveRight()"><i class="fa fa-angle-right fa-3x"></i></button>
+        <div class="proj-holder" id="projhold">
+            <!-- Item -->
+            <div class="proj-item">
+                <div class="proj-pic1"></div>
+                <h3 class="prj-head">Online Meet Manager</h3>
+                <div class="proj-desc">
+                    <p class="prj-desc">
+                    With this project, my aim was to record the audio for online meetings which can 
+                    be downloaded in .wav  format. The site also has a section where you can store 
+                    the data about your upcoming meetings as well.
+                    </p>
+                </div>
+                <button class="link" onclick="Open_OMM()">VIEW PROJECT</button>
+            </div>
+            <!-- Item -->
+            <div class="proj-item">
+                <div class="proj-pic2"></div>
+                <h3 class="prj-head">Image Compressor</h3>
+                <div class="proj-desc">
+                    <p class="prj-desc">
+                        With this project my aim was to develop a program in MALTAB, that takes a 
+                        picture from the computer,  compresses it to a specific size and then finally download it.
+                    </p>
+                </div>
+                <button class="link" onclick="Open_IC()">VIEW PROJECT</button>
+            </div>
+            <!-- Item -->
+            <div class="proj-item">
+                <div class="proj-pic3"></div>
+                <h3 class="prj-head">New Fractal Concept</h3>
+                <div class="proj-desc">
+                    <p class="prj-desc">
+                        This project was a part of my semester long project. In this we had to design a 
+                        new fractal. The design is similar to a ninja star when we increase the number of 
+                        iterations, so the name I gave was Ninja Fractal
+                    </p>
+                </div>
+                <button class="link" onclick="Open_NFC()">VIEW PROJECT</button>
+            </div>
+            <!-- Item -->
+            <div class="proj-item">
+                <div class="proj-pic4"></div>
+                <h3 class="prj-head">Cyber Security</h3>
+                <div class="proj-desc">
+                    <p class="prj-desc">
+                        In this project, I have explored ways in which the data can be stolen from devices and the 
+                        hacker may get access to devices. I had also tried to implement methods through which a 
+                        backdoor can be generated for data theft.
+                    </p>
+                </div>
+                <button class="link" onclick="Open_CS()">VIEW PROJECT</button>
+            </div>
+            <!-- Item -->
+            <div class="proj-item">
+                <div class="proj-pic5"></div>
+                <h3 class="prj-head">Generative Machine Learning</h3>
+                <div class="proj-desc">
+                    <p class="prj-desc">
+                        In this paper, different versions of Generative Adversarial Networks are implemented on 
+                        the Electroencephalogram (EEG) data to generate similar outputs. We had used Deep Convolutional 
+                        GAN (DCGAN), which was not implemented on the data set of EEGs earlier.
+                    </p>
+                </div>
+                <button class="link" onclick="Open_GML()">VIEW PROJECT</button>
+            </div>
+            <!-- Item -->
+            <div class="proj-item">
+                <div class="proj-pic6"></div>
+                <h3 class="prj-head">Natural Language Processing</h3>
+                <div class="proj-desc">
+                    <p class="prj-desc">
+                        In this project, I used a dataset of pre-classified tweets and trained models on it. Then I 
+                        extracted tweets from Twitter based on the queries. These are the tweets on which the models 
+                        check for misogynistic features and classify the tweet as misogynist or non-misogynist.
+                    </p>
+                </div>
+                <button class="link" onclick="Open_NLP()">VIEW PROJECT</button>
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="gallery-item1">
+            <div class="overlay">
+                <div class="description">Me with my team at the Poster Presentation</div>
+            </div>
+        </div>
+        <div class="gallery-item2">
+            <div class="overlay">
+                <div class="description">Being a part of the CONVOKE 3.0 team was a new experience</div>
+            </div>
+        </div>
+    </div>
+    <div class="blogs">
+        <h1 class="projs">My Writings</h1>
+        <button class="left-slider" id="leftShift" type="button" onclick="moveLeft1()"><i class="fa fa-angle-left fa-3x"></i></button>
+        <button class="right-slider" id="rightShift" type="button" onclick="moveRight1()"><i class="fa fa-angle-right fa-3x"></i></button>
+        <div class="blog-holder" id="bloghold">
+            <!--Item-->
+            <div class="blog-item1">
+                <h2 class="blog-title">Creating New Fonts with the Magic of Conformal Mapping</h2>
+                <div class="blog-content">
+                    <p class="content-text">
+                    A mathematical method called conformal mapping is used in complex analysis to transfer 
+                    one complex plane onto another while maintaining local angles. It is a method of “stretching” 
+                    or “squeezing” a complicated plane while maintaining the relative angles between intersecting arcs. 
+                    Because of this characteristic, conformal maps have many applications in physics, engineering, and mathematics.
+                    </p>
+                </div>
+                <button class="read-more" onclick="Read_MCM()">READ MORE</button>
+            </div>
+            <!--Item-->
+            <div class="blog-item2">
+                <h2 class="blog-title">Linear Programming Approach to Solve the Maximum Flow Problem</h2>
+                <div class="blog-content">
+                    <p class="content-text">
+                        An important optimization issue in graph theory and network flows is known as the Maximum Flow Problem. 
+                        The objective is to determine the greatest amount of flow that may be sent via a network, subject to 
+                        capacity limits on the edges. It is used to mimic many real-world circumstances.
+                    </p>
+                </div>
+                <button class="read-more" onclick="Read_NP()">READ MORE</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="addr">
+            <h2>Location</h2>
+            <p class="blk">Chhattarpur Extension, New Delhi</p>
+            <p class="blk">Delhi, India</p>
+        </div>
+        <div class="meet">
+            <h2>Meeting Time</h2>
+            <p class="blk">Monday-Friday</p>
+            <p class="blk">9.00am-5.00pm</p>
+        </div>
+        <div class="cntc-det">
+            <h2>Contact Me</h2>
+            <p class="blk">nikunjsaini37@gmail.com</p>
+            <p class="blk">(+91) 7428723316</p>
+        </div>
+    </div>
+</body>
+</html>

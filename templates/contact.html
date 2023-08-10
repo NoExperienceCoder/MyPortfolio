@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ url_for('static', filename='style.css' )}}" rel="stylesheet">
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <title>Document</title>
+</head>
+<body onload="MessageSent()">
+    <script>
+        function MessageSent(){
+            if("{{ flash_message }}" == "True"){
+                alert('Message Sent Succesfully!');
+                }
+            }
+    </script>
+    <div class="navbar">
+        <ul class="pages">
+            <li class="left-m"><a href="/home">NikunjSaini</a></li>
+            <li class="left"><a href="/about">About</a></li>
+            <li class="left"><a href="/project">Projects</a></li>
+            <li class="left"><a href="/contact">Contact</a></li>
+            <li class="right"><a href="https://www.instagram.com/niksain_0.o/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li class="right"><a href="https://www.linkedin.com/in/nikunj-saini-837b8421a/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li class="right"><a href="https://medium.com/@nikunjsaini37" target="_blank"><i class="fa fa-medium"></i></a></li>
+            <li class="right"><a href="https://github.com/NoExperienceCoder" target="_blank"><i class="fa fa-github"></i></a></li>
+        </ul>
+    </div>
+    <div class="information">
+        <div class="info-holder">
+            <h2 class="sub-b">Want to Discuss Something?</h2>
+            <p>Find my CV here. <a class="pdf" href="{{ url_for('DowloadManager')}}"><i class="fa fa-file-pdf-o"></i></a></p>
+            <p>Feel free to contact me via mail or a call. If I am unable to pick up 
+                the call then I would surely reply to mail. You can also simply drop a message here.</p>
+        </div>
+        <div class="form-holder">
+            <h3 class="cntc-me">Name (Required)</h3>
+            <form action="/SendMessage" method="post">
+            <div class="name-holder">
+                <div class="form-name">
+                    <label for="f-name">First Name</label>
+                    <input type="text" class="name" id="f-name" name="first_name" required>
+                </div>
+                <div class="form-name">
+                    <label for="l-name">Last Name</label>
+                    <input type="text" id="l-name" name="last_name" required>
+                </div>
+            </div>
+            <div class="mail-holder">
+                <label for="mail">E-mail ID (Required)</label>
+                <input type="email" id="mail" name="email_id" required>
+            </div>
+            <div class="message-holder">
+                <label for="msg">Message (Required)</label>
+                <textarea name="message" id="msg" rows="5" required></textarea>
+            </div>
+            <button class="submit">SEND</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="addr">
+            <h2>Location</h2>
+            <p class="blk">Chhattarpur Extension, New Delhi</p>
+            <p class="blk">Delhi, India</p>
+        </div>
+        <div class="meet">
+            <h2>Meeting Time</h2>
+            <p class="blk">Monday-Friday</p>
+            <p class="blk">9.00am-5.00pm</p>
+        </div>
+        <div class="cntc-det">
+            <h2>Contact Me</h2>
+            <p class="blk">nikunjsaini37@gmail.com</p>
+            <p class="blk">(+91) 7428723316</p>
+        </div>
+    </div>
+</body>
+</html>
